@@ -1,9 +1,9 @@
-/* Simple, beginner-friendly CSS with comments.
+/* AI: Simple, beginner-friendly CSS with comments.
 	 Edit colors, fonts, and spacing as you learn.
 	 We use basic layout (no CSS Grid) and small, clear rules.
 */
 
-/* Page basics */
+/* AI: Page basics */
 :root {
 	--max-width: 900px;
 	--accent: #2563eb; /* blue */
@@ -19,20 +19,24 @@ body {
 	background: #f8fafc;
 }
 
-/* Reusable container to center content */
+/* AI: Reusable container to center content */
 .container {
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 24px;
 }
 
-/* Hero / header */
+/* AI: Hero / header */
 .hero {
-	background: linear-gradient(180deg, #ffffff 0%, #eef2ff 100%);
+	background-image: url("img/hero-bg.jpg");
+	background-size: cover;
+	background-position: center;
 	border-bottom: 1px solid #e6e9ef;
 	padding: 36px 0;
 }
 .hero .container {
+  background: lightgreen;
+  border-radius: 20px;
 	display: flex;
 	align-items: center;
 	gap: 20px;
@@ -51,7 +55,7 @@ body {
 }
 .lead {
 	margin: 0 0 12px 0;
-	color: var(--muted);
+	color: darkgreen;
 }
 .cta {
 	display: inline-block;
@@ -62,34 +66,25 @@ body {
 	text-decoration: none;
 }
 
-/* Sections */
+/* AI: Sections */
 .section {
 	padding: 28px 0;
 	border-bottom: 1px solid #eef2f6;
 }
 .section h2 {
-	margin: 0 0 10px 0;
-	font-size: 1.2rem;
+	margin: 0 0 5px 0;
+	font-size: 1.5rem;
 }
 
-/* Skills as simple badges */
-.skills {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	gap: 8px;
-	flex-wrap: wrap;
-}
-.skills li {
-	background: #fff;
-	padding: 8px 10px;
-	border-radius: 999px;
-	border: 1px solid #e6eefb;
-	font-size: 0.95rem;
+/* AI: Skills as simple badges */
+
+#skills section h3 {
+  font-style: bold;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
 }
 
-/* Links list */
+/* AI: Links list */
 .links {
 	list-style: none;
 	padding: 0;
@@ -102,14 +97,14 @@ body {
 }
 .links a:hover { text-decoration: underline; }
 
-/* Footer */
+/* AI: Footer */
 .footer {
 	padding: 18px 0;
 	color: var(--muted);
 	text-align: center;
 }
 
-/* Simple responsive rules for small screens */
+/* AI: Simple responsive rules for small screens */
 @media (max-width: 600px) {
 	.hero .container { flex-direction: column; text-align: center; }
 	.hero-text h1 { font-size: 1.4rem; }
