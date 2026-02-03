@@ -2,10 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Header / Hero section -->
+  <header class="hero">
+    <div class="container">
+      <!-- Replace the src with your own photo in the img/ folder -->
+      <img class="avatar" src="img/linkedin.jpg" alt="Nathan Winkel">
+      <div class="hero-text">
+        <h1>Hello, I'm Nathan Winkel</h1>
+        <p class="lead">Hobbyist programmer attending University of Texas at Dallas</p>
+        <p><a class="cta" href="#projects">See projects</a></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bio section -->
+  <section id="bio" class="section container">
+    <h2>Bio</h2>
+    <!-- Short paragraph about yourself. Edit freely. -->
+    <p>
+      Hello there!<br/>
+      I'm a student attending University of Texas at Dallas and am going for a B.S. in Computer Science degree. I am a programming enthusiast 
+      and I enjoy experimenting with code outside of class. Until I can land an actual programming job, I bag groceries, push carts, and ring up
+      customers at my local H.E.B. to save up for the future.
+    </p>
+  </section>
+
+  <!-- Skills section -->
+  <section id="skills" class="section container">
+    <h2>Skills</h2>
+    <!-- Simple list of skills. Turn into a list of badges below. -->
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+    </ul>
+  </section>
+
+  <!-- Links section -->
+  <section id="links" class="section container">
+    <h2>Links</h2>
+    <!-- Add your real links here -->
+    <ul class="links">
+      <li><a href="#">Portfolio (projects)</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="mailto:you@example.com">Email</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer container">
+    <p>&copy; <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script>
+    // Simple JS to keep the footer year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
