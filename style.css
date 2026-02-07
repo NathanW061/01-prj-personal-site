@@ -2,12 +2,19 @@
 	 Edit colors, fonts, and spacing as you learn.
 	 We use basic layout (no CSS Grid) and small, clear rules.
 */
+/* Certain comments are prepended with 'AI: ' to help me 
+   distinguish comments I've written from comments the AI has written.
+*/
 
 /* AI: Page basics */
 :root {
 	--max-width: 900px;
-	--accent: #2563eb; /* blue */
-	--muted: #6b7280;   /* gray */
+	--accent: #2563eb; /* AI: blue */
+	--muted: #6b7280;   /* AI: gray */
+
+  --hero-light: rgb(182, 212, 182);
+  --hero-dark: darkgreen;
+  --hero-darker: rgb(0, 66, 0);
 }
 
 * { box-sizing: border-box; }
@@ -28,20 +35,25 @@ body {
 
 /* AI: Hero / header */
 .hero {
+  /* Background */
 	background-image: url("img/hero-bg.jpg");
 	background-size: cover;
 	background-position: center;
+
+  /* Spacing */
 	border-bottom: 1px solid #e6e9ef;
 	padding: 36px 0;
-}
-.hero .container {
-  background: rgb(182, 212, 182);
-  border-radius: 20px;
-  border: darkgreen 4px solid;
-  box-shadow: black 4px 4px 20px;
-	display: flex;
-	align-items: center;
-	gap: 20px;
+
+  /* Hero Container */
+  .container {
+    background: var(--hero-light);
+    border-radius: 20px;
+    border: var(--hero-dark) 4px solid;
+    box-shadow: black 4px 4px 20px;
+	  display: flex;
+	  align-items: center;
+	  gap: 20px;
+  }
 }
 .avatar {
 	width: 110px;
@@ -57,11 +69,11 @@ body {
 }
 .lead {
 	margin: 0 0 12px 0;
-	color: darkgreen;
+	color: var(--hero-darker);
 }
 .cta {
 	display: inline-block;
-	background: darkgreen;
+	background: var(--hero-dark);
 	color: white;
 	padding: 8px 14px;
 	border-radius: 6px;
@@ -82,23 +94,24 @@ body {
   /* Spacing between section borders */
   padding: 15px 20px;
   margin-top: 20px;
+
+  /* Spacing on paragraphs */
+  p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* Section header sizing */
+  h2 {
+	  margin: 0 0 12px 0;
+	  font-size: 1.5rem;
+
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--muted);
+  }
 }
 
-.section p {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.section h2 {
-	margin: 0 0 12px 0;
-	font-size: 1.5rem;
-
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--muted);
-}
-
-/* AI: Skills as simple badges */
-
+/* Skills header font and spacing */
 #skills section h3 {
   font-style: bold;
   font-size: 1.15rem;
@@ -106,7 +119,11 @@ body {
   margin-bottom: 12px;
 }
 
-/* AI: Links list */
+/* Ensure icons roughly align with the skills headers */
+.material-symbols-outlined {
+  vertical-align: bottom;
+}
+
 /* AI: Links list */
 #links {
 	padding: 5px 15px;
@@ -114,29 +131,40 @@ body {
   min-width: 130px;
   margin-left: auto;
   margin-right: auto;
-}
 
-#links h2 {
-	text-align: center;
-  margin-bottom: 2px;
+  /* Links list header */
+  h2 {
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  /* Unordered list */
+  ul {
+    display: inline-block;
+	  padding: 0;
+	  margin: 0;
+  }
+
+  /* Unordered list items */
+  li {
+    margin: 6px 0;
+	  list-style: none;
+  }
+
+  /* Hyperlinks */
+  a {
+    color: var(--accent);
+	  text-decoration: none;
+	  display: inline-block;
+	  padding: 2px 6px;
+	  text-align: center;
+  }
+
+  /* Hyperlinks - Hover state */
+  a:hover {
+    text-decoration: underline;
+  }
 }
-#links ul {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-#links li {
-	margin: 6px 0;
-	list-style: none;
-}
-#links a {
-	color: var(--accent);
-	text-decoration: none;
-	display: inline-block;
-	padding: 2px 6px;
-	text-align: center;
-}
-#links a:hover { text-decoration: underline; }
 
 /* AI: Footer */
 .footer {
@@ -160,6 +188,7 @@ body {
   }
 	.hero-text h1 { font-size: 1.4rem; }
 
+  /* Ensure that the section containers don't touch the screen edges */
   .section {
     background-color: white;
 
